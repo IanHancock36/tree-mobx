@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import FortuneCookieModel from "../models/FortuneCookieModel"
+// creat new instance pass in the intial state of models data 
+const fortuneCookie = FortuneCookieModel.create({
+  
+})
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App fortuneCookie={fortuneCookie}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
