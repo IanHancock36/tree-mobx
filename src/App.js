@@ -7,6 +7,8 @@ function App (props){
       Hello
     <h1>{fortuneCookie.status()}</h1>
     <button onClick={fortuneCookie.newFortune}> New Fortune </button>
+    <button onClick={getFortune()}></button>
+    <h1>{fortunes}</h1>
     </div>
   );
 }

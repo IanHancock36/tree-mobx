@@ -15,8 +15,8 @@ mealPrice: types.string,
  newFortune(){
     self.pullNewFortune =true
 },
-const getFortune = flow(function* getFortune{
-  const responae = yield axios
+ getFortune = flow(function* getFortune(){
+  const response = yield axios
   .get('http://fortunecookieapi.com/v1/fortunes?limit=&skip=&page=')
   .then((value)=> value.data)
 }),
