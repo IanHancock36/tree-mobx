@@ -1,8 +1,10 @@
 import {types} from 'mobx-state-tree'
+import  FortuneCookieList from './FortuneCookieList'
 // observable properties below *****
 const userCookies = types.model("FortuneCookieModel",{
 // fortune: types.string,
 // userName: types.string,
+fortuneCookieList : types.optional(FortuneCookieList,{fortunes: []}) ,
  pullNewFortune: types.boolean,
 // fortuneLiked: types.boolean,
 numFortune: types.string,
