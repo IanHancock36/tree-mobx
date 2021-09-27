@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import FortuneCookieModel from "../models/FortuneCookieModel"
+import FortuneCookieModel from './models/FortuneCookieStore'
 // creat new instance pass in the intial state of models data 
 const fortuneCookie = FortuneCookieModel.create({
-  
+  mealPrice:"USD",
+  userName: "Ian",
+  numFortune: "",
+  pullNewFortune: false
+
 })
 
 ReactDOM.render(
