@@ -6,9 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import FortuneCookieModel from './models/FortuneCookieStore'
 // creat new instance pass in the intial state of models data 
 const fortuneCookie = FortuneCookieModel.create({
-  mealPrice:"USD",
-  userName: "Ian",
-  numFortune: "",
+  // getNewFortune()
   pullNewFortune: false
 })
 

@@ -15,17 +15,20 @@ const userCookies = types.model("FortuneCookieModel", {
     newFortune() {
         self.pullNewFortune = true
     },
-   getFortune = flow(function* getFortune() {
+    getFortune = flow(function* () {
         try {
-            const response = yield axios
+             response = yield axios
                 .get('http://fortunecookieapi.com/v1/fortunes?limit=&skip=&page=')
             console.log('response', response)
+                .then((value) => value.data)
+            self.fortunes = cast(response)
         } catch (e) {
             console.log('error :', e)
         }
 
-        //   .then((value)=> value.data)
+        return { fortunes }
     }),
+
 })).views((self) => ({
     status() {
         return self.pullNewFortune ? 'new fortune' : 'not a fortune'

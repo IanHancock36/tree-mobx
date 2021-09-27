@@ -1,6 +1,6 @@
 import { types } from 'mobx-state-tree'
 
-const fortunes = types.model('Fortune',{
+const Fortunes = types.model('Fortune',{
     // quantity: types.optional(types.number,[]),
     id: types.optional(types.string, ''),
     message: types.optional(types.string,''),
@@ -8,6 +8,6 @@ const fortunes = types.model('Fortune',{
 
 
 
-export default Fortune
+export default Fortunes
 // the api call for this is 'http://fortunecookieapi.com/v1/fortunes?limit=&skip=&page='
 
