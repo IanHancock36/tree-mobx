@@ -10,7 +10,6 @@ const fortuneCookie = FortuneCookieModel.create({
   userName: "Ian",
   numFortune: "",
   pullNewFortune: false
-
 })
 
 ReactDOM.render(

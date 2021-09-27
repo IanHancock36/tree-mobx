@@ -1,6 +1,6 @@
 import { types } from 'mobx-state-tree'
 
-const Fortune = types.model('Fortune',{
+const fortunes = types.model('Fortune',{
     // quantity: types.optional(types.number,[]),
     id: types.optional(types.string, ''),
     message: types.optional(types.string,''),
